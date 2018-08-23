@@ -1,22 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+
+  <title>UFO Sightings Finder</title>
   <meta charset="utf-8">
-  <title>UFO Finder</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"><!--to support IE9 or IE8-->
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!--the website will follow the width of the device the user is on-->
+  <!--case-insensitive search lib-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-  <link rel="stylesheet" href="static/css/style.css">
-</head>
+  <link rel="stylesheet" href="css/style.css">
 
+  <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  -->
+</head>
 <body>
+    <marquee>A scrolling text created with HTML Marquee element.</marquee>
+
   <div class="wrapper">
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <div class="navbar-header">
           <a class="navbar-brand" href="index.html">UFO Sightings
-            <img class="nav-ufo" src="static/images/ufo.svg">
+            <img class="nav-ufo" src="images/ufo.svg">
           </a>
         </div>
       </div>
@@ -68,13 +77,32 @@
       </div>
     </div>
     <footer class="footer">
-      <span class="bottom">UFO Sightings</span>
+      <!--span class="bottom">UFO Sightings</span-->
     </footer>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
-  <script src="static/js/data.js"></script>
-  <script src="static/js/app.js"></script>
+
 </body>
+
+
+ <!--Pagination--><!-- Page browsing begin -->
+ <div class="pagination">
+  <div class="row">
+    <p id="pageresult">
+    </p>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+        <strong>
+          <input type="button" id="first" class="btn btn-sm" onclick="firstPage()" value="<<"/>
+          <input type="button" id="previous" class="btn btn-sm" onclick="previousPage()" value="< Previous"/>
+          <input type="button" id="next" class="btn btn-sm" onclick="nextPage()" value="Next >"/>
+          <input type="button" id="last" class="btn btn-sm" onclick="lastPage()" value=">>"/>
+        </strong>
+    </div>
+  </div>
+</div>
+<!--/.Pagination--> <!-- Page browsing end -->
 
  <!--Footer-->
  <footer class="page-footer center-on-small-only stylish-color-dark">
@@ -90,6 +118,14 @@
 </footer>
 <!--/.Footer-->
 
-<script src="Data/data.js" type="text/javascript"></script>
-<script src="js/index.js" type="text/javascript"></script>
+<script src="data.js" type="text/javascript"></script>
+<script src="app.js" type="text/javascript"></script>
+<!--script src="https://d3js.org/d3.v4.min.js"></script-->
+<script type = "text/javascript">
+    var $marquee = d3.select("marquee");
+    var ComentData = data;
+    var i = Math.random() * ComentData.length;
+    $marquee.text( "Breaking News!!  : UFO sighted at " + ComentData[(i) | 0].city.toUpperCase() + " City in "+ ComentData[(i) | 0].country.toUpperCase() +". Eye-witnesses say - '"+ ComentData[(i) | 0].comments+".'")
+</script>
+
 </html>
