@@ -1,3 +1,14 @@
+
+### Created a website on which the sightings of the UFOs (Unidentified Foreign Objects) can be searched.
+### They can be searched on Country, City, Date, County and shape.
+### HTML, Javascript, CSSwere used. 
+### Marquee, Carousel, Different kinds of images and buttons and their transition features were used to improve the look and feel.
+### The data is displayed in tabular form and is restricted for 50 records per page.
+### page can be navigated a) straight to the first and last pages or can be traversed one previous page or next page by pagination. 
+### Ajax compliance was used to make it multibrouser compatible.
+### Bootstrap was used to further enhance the look and feel of the website.
+
+
 # Unit 14 | Assignment - JavaScript and DOM Manipulation
 
 ## Background

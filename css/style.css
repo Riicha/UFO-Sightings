@@ -14,12 +14,23 @@
 
 .btn:hover
 {
-    background-color: #C70039;
+    background-color: rgb(16, 77, 95);
     font-weight: bolder; 
 }
 
+.btn-sm { 
+  background-color: rgb(51, 122, 183);
+  font-size: 12px;
+  color: #FFFFFF;
+}
+
+.btn-sm:hover { 
+  background-color: rgb(16, 77, 95);
+  color: #FFFFFF;
+}
+
 .table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
-    background-color: #97EE21;
+    background-color: rgb(222, 230, 233);
     font-weight: bolder;
   }
 
@@ -31,18 +42,18 @@
   text-align: center;
   font-size:16px;
   font-weight: bolder;
-  color: #C70039;
+  color: rgb(51, 122, 183);
 }
 .card-title{
   text-align: center;
   font-size:20px;
   font-weight: bolder;
-  background-color: #C70039;
+  background-color: rgb(51, 122, 183);
   margin:20px;
   color: #FFFFFF;
 }
 .footer-copyright{
-  background-color: rgb(0, 0, 0); 
+  background-color: rgb(51, 122, 183); 
   color: #FFF;
 }
 
@@ -55,6 +66,15 @@
  }
 
 thead{
-  background-color: #581845;
+  background-color: rgb(51, 122, 183);
   color: #FFFFFF;
+}
+
+/* This CSS styles the ufo icon in the navbar */
+.nav-ufo {
+  position: absolute;
+  bottom: 5px;
+  left: 150px;
+  width: 35px;
+  color: rgb(56, 13, 126);
 }
