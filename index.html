@@ -15,7 +15,9 @@
 <body>
   <div>
     <h3>
-      <marquee>A scrolling text created with HTML Marquee element.</marquee>
+      <marquee id="marquee">
+        <img id="ufoImage">
+      </marquee>
     </h3>
   </div>
   <!--CAROUSEL-->
@@ -33,6 +35,7 @@
       <!-- Wrapper for slides -->
       <div class="carousel-inner" role="listbox">
         <div class="item active">
+        
           <img src="Images/ufosighting_img1.jpg" alt="UFO Sighting" class="img-responsive">
           <div class="carousel-caption">
             <h1>UFO Sightings</h1>
@@ -192,10 +195,20 @@
   
   <!-- Dynamic marquee -->
   <script type = "text/javascript">
-    var $marquee = d3.select("marquee");
+    var Marquee = document.getElementById("marquee");
     var ComentData = ufoData;
     var i = Math.random() * ComentData.length;
-    $marquee.text( "Breaking News!!  : UFO sighted at " + ComentData[(i) | 0].city.toUpperCase() + " City in "+ ComentData[(i) | 0].country.toUpperCase() +". Eye-witnesses say - '"+ ComentData[(i) | 0].comments+".'")
+    var breakingNews =  "Breaking News!!  : UFO sighted at " 
+                        + ComentData[(i) | 0].city.toUpperCase() + " City in "
+                        + ComentData[(i) | 0].country.toUpperCase() 
+                        +". Eye-witnesses say - '"
+                        + ComentData[(i) | 0].comments+".'";
+    var ufoImage = document.getElementById('ufoImage')
+    ufoImage.setAttribute('src','images/ufo.svg');
+    ufoImage.setAttribute('width','20');
+    ufoImage.setAttribute('height','20');
+    // Append the news at the end of the ufo image!
+    Marquee.innerHTML += breakingNews;
 </script>
 
 </body>
